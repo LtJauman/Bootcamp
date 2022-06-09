@@ -61,11 +61,5 @@ namespace StudentEnrolment
         {
             _courses.Clear();
         }
-        public void Populate() //Method to artificially add data, can be improve in further iterations of this program and have it grab data from a database
-        {
-            _courses.Add(new Courses(1, "Computer Science", "Learn how to code and build databases easily"));
-            _courses.Add(new Courses(2, "Maths", "Learn how to differentiate, integrate and more!"));
-            _courses.Add(new Courses(3, "Economics", "Understand how our economy works, what inflation is and much more"));
-        }
     }
 }

@@ -58,14 +58,5 @@ namespace StudentEnrolment
         {
             _subjects.Clear();
         }
-        public void Populate() //Method to artificially add data, can be improve in further iterations of this program and have it grab data from a database
-        {
-            _subjects.Add(new Subjects(1, "Differentiation", "Learn about differentiation"));
-            _subjects.Add(new Subjects(2, "Integration", "Learn about integration"));
-            _subjects.Add(new Subjects(3, "Microeconomics", "Learn about Microeconomics"));
-            _subjects.Add(new Subjects(4, "Macroeconomics", "Learn about macroeconomics"));
-            _subjects.Add(new Subjects(5, "MySQL", "Learn about databases and SQL"));
-
-        }
     }
 }

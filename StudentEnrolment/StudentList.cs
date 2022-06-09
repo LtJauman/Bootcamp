@@ -58,12 +58,5 @@ namespace StudentEnrolment
         {
             _students.Clear();
         }
-        public void Populate() //Method to artificially add data, can be improve in further iterations of this program and have it grab data from a database
-        {
-            _students.Add(new Students(1, "Diego" ,"Jaumandreu"));
-            _students.Add(new Students(2, "Zak", "Hersi"));
-            _students.Add(new Students(3, "Mohammed", "Hussain"));
-            _students.Add(new Students(4, "Joraver", "Rao"));
-        }
     }
 }

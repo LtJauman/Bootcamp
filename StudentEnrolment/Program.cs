@@ -9,13 +9,12 @@ namespace StudentEnrolment
     {
         static void Main(string[] args)
         {
+            using var context = new StudentEnrolmentContext();
+            context.Database.EnsureCreated();
             bool active = true;
             var studentList = new StudentList();
             var courseList = new CourseList();
             var subjectList = new SubjectList();
-            studentList.Populate();
-            courseList.Populate();
-            subjectList.Populate();
             while (active == true)
             {
                 Console.WriteLine("Welcome to StudentEnrollment app");
@@ -28,9 +27,6 @@ namespace StudentEnrolment
 
                 string input = Console.ReadLine();
                 active = InputSwitcher(studentList, courseList, subjectList, input);
-
-
-
             }
         }
         private static bool InputSwitcher(StudentList studentList, CourseList courseList, SubjectList subjectList, string input)
@@ -45,15 +41,15 @@ namespace StudentEnrolment
                     string displayInput = Console.ReadLine();
                     if (displayInput == "1")
                     {
-                        studentList.DisplayItems();
+                        DisplayData.DisplayStudents();
                     }
                     if (displayInput == "2")
                     {
-                        courseList.DisplayItems();
+                        DisplayData.DisplayCourses();
                     }
                     if (displayInput == "3")
                     {
-                        subjectList.DisplayItems();
+                        DisplayData.DisplaySubjects();
                     }
                     return true;
                 case "2":
@@ -109,9 +105,6 @@ namespace StudentEnrolment
 
         }
 
-        // So the task wants me to use the following to ensure the database is created (which I don't think it requires migration). To do this, I think it should run it at the start or when reading from a database such as doing list functions
-        //using var context = new StudentEnrolmentContext();
-        //context.Database.EnsureCreated();
     }
 }
 

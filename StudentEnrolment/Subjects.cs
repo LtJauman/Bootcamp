@@ -16,6 +16,7 @@ namespace StudentEnrolment
         public int SubjectId { set; get; }
         public string SubjectName { set; get; }
         public string SubjectDescription { set; get; }
+        // Shows that it belongs to a course, should I also add the course id on constructor? 
         public Courses Course { get; set; }
         public Subjects(int SubjectId, string SubjectName, string SubjectDescription)
         {
