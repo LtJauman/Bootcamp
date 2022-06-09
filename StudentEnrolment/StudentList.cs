@@ -11,7 +11,8 @@ namespace StudentEnrolment
         public void AddNewStudent() 
         {
             Console.WriteLine("Enter the student id: ");
-            string id = Console.ReadLine();
+            var input = Console.ReadLine();
+            int id = Convert.ToInt32(input);
             Console.WriteLine("Enter a new name: ");
             string name = Console.ReadLine();
             Console.WriteLine("Enter a new surname: ");
@@ -22,12 +23,12 @@ namespace StudentEnrolment
         {
             this.DisplayItems();
             Console.WriteLine("Choose the id of the student to be deleted");
-            string input = Console.ReadLine();
-            var index = this.FindStudentIndex(input);
+            var input = Console.ReadLine();
+            int index = Convert.ToInt32(input);
             _students.RemoveAt(index);
 
         }
-        public int FindStudentIndex(string id)
+        public int FindStudentIndex(int id)
         {
             var i = 0;
             foreach (var student in _students)
@@ -59,10 +60,10 @@ namespace StudentEnrolment
         }
         public void Populate() //Method to artificially add data, can be improve in further iterations of this program and have it grab data from a database
         {
-            _students.Add(new Students("1", "Diego" ,"Jaumandreu"));
-            _students.Add(new Students("2", "Zak", "Hersi"));
-            _students.Add(new Students("3", "Mohammed", "Hussain"));
-            _students.Add(new Students("4", "Joraver", "Rao"));
+            _students.Add(new Students(1, "Diego" ,"Jaumandreu"));
+            _students.Add(new Students(2, "Zak", "Hersi"));
+            _students.Add(new Students(3, "Mohammed", "Hussain"));
+            _students.Add(new Students(4, "Joraver", "Rao"));
         }
     }
 }

@@ -12,7 +12,8 @@ namespace StudentEnrolment
         public void AddNewSubject()
         {
             Console.WriteLine("Enter the course id: ");
-            string id = Console.ReadLine();
+            var input = Console.ReadLine();
+            int id = Convert.ToInt32(input);
             Console.WriteLine("Enter a new name: ");
             string name = Console.ReadLine();
             Console.WriteLine("Enter a description: ");
@@ -23,12 +24,12 @@ namespace StudentEnrolment
         {
             this.DisplayItems();
             Console.WriteLine("Choose the id of the course to be deleted");
-            string input = Console.ReadLine();
-            var index = this.FindSubjectIndex(input);
+            var input = Console.ReadLine();
+            int index = Convert.ToInt32(input);
             _subjects.RemoveAt(index);
 
         }
-        public int FindSubjectIndex(string id)
+        public int FindSubjectIndex(int id)
         {
             var i = 0;
             foreach (var subject in _subjects)
@@ -59,11 +60,11 @@ namespace StudentEnrolment
         }
         public void Populate() //Method to artificially add data, can be improve in further iterations of this program and have it grab data from a database
         {
-            _subjects.Add(new Subjects("1", "Differentiation", "Learn about differentiation"));
-            _subjects.Add(new Subjects("2", "Integration", "Learn about integration"));
-            _subjects.Add(new Subjects("3", "Microeconomics", "Learn about Microeconomics"));
-            _subjects.Add(new Subjects("4", "Macroeconomics", "Learn about macroeconomics"));
-            _subjects.Add(new Subjects("5", "MySQL", "Learn about databases and SQL"));
+            _subjects.Add(new Subjects(1, "Differentiation", "Learn about differentiation"));
+            _subjects.Add(new Subjects(2, "Integration", "Learn about integration"));
+            _subjects.Add(new Subjects(3, "Microeconomics", "Learn about Microeconomics"));
+            _subjects.Add(new Subjects(4, "Macroeconomics", "Learn about macroeconomics"));
+            _subjects.Add(new Subjects(5, "MySQL", "Learn about databases and SQL"));
 
         }
     }

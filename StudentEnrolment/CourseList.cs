@@ -11,7 +11,8 @@ namespace StudentEnrolment
         public void AddNewCourse() 
         {
             Console.WriteLine("Enter the course id: ");
-            var id = Console.ReadLine();
+            var input = Console.ReadLine();
+            int id= Convert.ToInt32(input);
             Console.WriteLine("Enter the name of the new course: ");
             var name = Console.ReadLine();
             Console.WriteLine("Enter a description for the course: ");
@@ -23,11 +24,12 @@ namespace StudentEnrolment
             this.DisplayItems();
             Console.WriteLine("Choose the id of the course to be deleted");
             var input = Console.ReadLine();
-            var index = this.FindCourseIndex(input);
+            int converted = Convert.ToInt32(input);
+            var index = this.FindCourseIndex(converted);
             _courses.RemoveAt(index);
 
         }
-        public int FindCourseIndex(string id)
+        public int FindCourseIndex(int id)
         {
             var i = 0;
             foreach (var course in _courses)
@@ -61,9 +63,9 @@ namespace StudentEnrolment
         }
         public void Populate() //Method to artificially add data, can be improve in further iterations of this program and have it grab data from a database
         {
-            _courses.Add(new Courses("1", "Computer Science", "Learn how to code and build databases easily"));
-            _courses.Add(new Courses("2", "Maths", "Learn how to differentiate, integrate and more!"));
-            _courses.Add(new Courses("3", "Economics", "Understand how our economy works, what inflation is and much more"));
+            _courses.Add(new Courses(1, "Computer Science", "Learn how to code and build databases easily"));
+            _courses.Add(new Courses(2, "Maths", "Learn how to differentiate, integrate and more!"));
+            _courses.Add(new Courses(3, "Economics", "Understand how our economy works, what inflation is and much more"));
         }
     }
 }
