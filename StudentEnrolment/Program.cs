@@ -81,15 +81,15 @@ namespace StudentEnrolment
                     string deleteInput = Console.ReadLine();
                     if (deleteInput == "1")
                     {
-                        //studentList.DeleteItem();
+                        DeleteData.DeleteStudentById();
                     }
                     if (deleteInput == "2")
                     {
-                        //courseList.DeleteItem();
+                        DeleteData.DeleteCourseById();
                     }
                     if (deleteInput == "3")
                     {
-                        //subjectList.DeleteItem();
+                        DeleteData.DeleteSubjectById();
                     }
                     return true;
                 case "4":
