@@ -108,25 +108,10 @@ namespace StudentEnrolment
             }
 
         }
-        //private static void PrintData()
-        //{
 
-        //    // Gets and prints all books in database
-        //    using (var context = new StudentEnrolmentContext())
-        //    {
-        //        context.Database.EnsureCreated();
-        //        var subjects = context.Subject.Include(p => p.Course);
-        //        foreach (var subject in subjects)
-        //        {
-        //            var data = new StringBuilder();
-        //            data.AppendLine($"ISBN: {subject.SubjectName}");
-        //            data.AppendLine($"Title: {subject.SubjectDescription}");
-        //            data.AppendLine($"Publisher: {subject.Course.CourseName}");
-        //            Console.WriteLine(data.ToString());
-        //            Console.ReadLine();
-        //        }
-        //    }
-        //}
+        // So the task wants me to use the following to ensure the database is created (which I don't think it requires migration). To do this, I think it should run it at the start or when reading from a database such as doing list functions
+        //using var context = new StudentEnrolmentContext();
+        //context.Database.EnsureCreated();
     }
 }
 
