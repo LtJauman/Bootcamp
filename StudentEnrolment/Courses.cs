@@ -16,9 +16,8 @@ namespace StudentEnrolment
         public string CourseName { set; get; }
         public string CourseDescription { set; get; }
 
-        public Courses(int CourseId, string CourseName, string CourseDescription)
+        public Courses(string CourseName, string CourseDescription)
         {
-            this.CourseId = CourseId;
             this.CourseName = CourseName;
             this.CourseDescription = CourseDescription;
 

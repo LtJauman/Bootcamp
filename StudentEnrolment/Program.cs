@@ -12,9 +12,6 @@ namespace StudentEnrolment
             using var context = new StudentEnrolmentContext();
             context.Database.EnsureCreated();
             bool active = true;
-            var studentList = new StudentList();
-            var courseList = new CourseList();
-            var subjectList = new SubjectList();
             while (active == true)
             {
                 Console.WriteLine("Welcome to StudentEnrollment app");
@@ -26,10 +23,10 @@ namespace StudentEnrolment
                 Console.WriteLine("Enter answer: ");
 
                 string input = Console.ReadLine();
-                active = InputSwitcher(studentList, courseList, subjectList, input);
+                active = InputSwitcher(input);
             }
         }
-        private static bool InputSwitcher(StudentList studentList, CourseList courseList, SubjectList subjectList, string input)
+        private static bool InputSwitcher(string input)
         {
             switch (input)
             {
@@ -62,17 +59,17 @@ namespace StudentEnrolment
                     if (addInput == "1")
                     {
 
-                        studentList.AddNewStudent();
+                        InsertData.InputStudentInfo();
 
                     }
                     if (addInput == "2")
                     {
-                        courseList.AddNewCourse();
+                        InsertData.InputCourseInfo();
 
                     }
                     if (addInput == "3")
                     {
-                        subjectList.AddNewSubject();
+                        InsertData.InputSubjectInfo();
 
                     }
                     return true;
@@ -84,15 +81,15 @@ namespace StudentEnrolment
                     string deleteInput = Console.ReadLine();
                     if (deleteInput == "1")
                     {
-                        studentList.DeleteItem();
+                        //studentList.DeleteItem();
                     }
                     if (deleteInput == "2")
                     {
-                        courseList.DeleteItem();
+                        //courseList.DeleteItem();
                     }
                     if (deleteInput == "3")
                     {
-                        subjectList.DeleteItem();
+                        //subjectList.DeleteItem();
                     }
                     return true;
                 case "4":

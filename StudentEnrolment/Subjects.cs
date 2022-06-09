@@ -18,9 +18,8 @@ namespace StudentEnrolment
         public string SubjectDescription { set; get; }
         // Shows that it belongs to a course, should I also add the course id on constructor? 
         public Courses Course { get; set; }
-        public Subjects(int SubjectId, string SubjectName, string SubjectDescription)
+        public Subjects(string SubjectName, string SubjectDescription)
         {
-            this.SubjectId = SubjectId;
             this.SubjectName = SubjectName;
             this.SubjectDescription = SubjectDescription;
 

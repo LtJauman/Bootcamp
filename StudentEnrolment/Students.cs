@@ -16,11 +16,11 @@ namespace StudentEnrolment
         public string FirstName { get; set; }
         public string LastName { get; set; }
 
-        public Students(int StudentId, string FirstName, string LastName)
+        public Students(string firstName, string lastName)
         {
-            this.StudentId = StudentId;
-            this.FirstName = FirstName;
-            this.LastName = LastName;
+            //this.StudentId = StudentId;
+            this.FirstName = firstName;
+            this.LastName = lastName;
 
         }
     }
