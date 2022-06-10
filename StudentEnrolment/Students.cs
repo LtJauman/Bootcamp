@@ -15,13 +15,12 @@ namespace StudentEnrolment
         public int StudentId { get; set;  } 
         public string FirstName { get; set; }
         public string LastName { get; set; }
+        public IList<CourseMembership> CourseMemberships { get; set; }
 
         public Students(string firstName, string lastName)
         {
-            //this.StudentId = StudentId;
             this.FirstName = firstName;
             this.LastName = lastName;
-
         }
     }
 }

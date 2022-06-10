@@ -18,6 +18,8 @@ namespace StudentEnrolment
         public string SubjectDescription { set; get; }
         // Shows that it belongs to a course, should I also add the course id on constructor? 
         public Courses Course { get; set; }
+        [ForeignKey("Course")]
+        public int CourseId { set; get; }
         public Subjects(string SubjectName, string SubjectDescription)
         {
             this.SubjectName = SubjectName;
