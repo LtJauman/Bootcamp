@@ -17,7 +17,7 @@ namespace StudentEnrolmentWebApp.Models
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseMySQL("server=localhost;database=studentenrolment3;user=root;password=BigotesEsLAPUTAAma£$123");
+            optionsBuilder.UseMySQL("server=localhost;database=studentenrolmentwebsite;user=root;password=BigotesEsLAPUTAAma£$123");
         }
 
         public StudentEnrolmentContext(DbContextOptions<StudentEnrolmentContext> options)

@@ -439,3 +439,8 @@ C:\Users\djaumandreuondaro\Documents\Bootcamp\StudentEnrolmentWebApp\obj\Debug\n
 C:\Users\djaumandreuondaro\Documents\Bootcamp\StudentEnrolmentWebApp\obj\Debug\net5.0\StudentEnrolmentWebApp.pdb
 C:\Users\djaumandreuondaro\Documents\Bootcamp\StudentEnrolmentWebApp\obj\Debug\net5.0\StudentEnrolmentWebApp.genruntimeconfig.cache
 C:\Users\djaumandreuondaro\Documents\Bootcamp\StudentEnrolmentWebApp\obj\Debug\net5.0\ref\StudentEnrolmentWebApp.dll
+C:\Users\djaumandreuondaro\Documents\Bootcamp\StudentEnrolmentWebApp\obj\Debug\net5.0\Razor\Pages\StudentPage\Create.cshtml.g.cs
+C:\Users\djaumandreuondaro\Documents\Bootcamp\StudentEnrolmentWebApp\obj\Debug\net5.0\Razor\Pages\StudentPage\Delete.cshtml.g.cs
+C:\Users\djaumandreuondaro\Documents\Bootcamp\StudentEnrolmentWebApp\obj\Debug\net5.0\Razor\Pages\StudentPage\Details.cshtml.g.cs
+C:\Users\djaumandreuondaro\Documents\Bootcamp\StudentEnrolmentWebApp\obj\Debug\net5.0\Razor\Pages\StudentPage\Edit.cshtml.g.cs
+C:\Users\djaumandreuondaro\Documents\Bootcamp\StudentEnrolmentWebApp\obj\Debug\net5.0\Razor\Pages\StudentPage\Index.cshtml.g.cs

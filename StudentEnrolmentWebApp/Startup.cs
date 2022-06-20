@@ -26,7 +26,7 @@ namespace StudentEnrolmentWebApp
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
-            services.AddDbContext<StudentEnrolmentContext>(opt => opt.UseMySQL("server=localhost;database=newstudentenrolment3;user=root;password=1928592fkjda$"));
+            services.AddDbContext<StudentEnrolmentContext>(opt => opt.UseMySQL("server=localhost;database=studentenrolmentwebsite;user=root;password=1928592fkjda$"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
