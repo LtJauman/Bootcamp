@@ -12,7 +12,9 @@ import { AddCouComponent } from './course/add-cou/add-cou.component';
 import { SubjectComponent } from './subject/subject.component';
 import { DisplaySubComponent } from './subject/display-sub/display-sub.component';
 import { AddSubComponent } from './subject/add-sub/add-sub.component';
-
+import { SharedService } from './shared.service';
+import {HttpClientModule} from '@angular/common/http'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,9 +30,12 @@ import { AddSubComponent } from './subject/add-sub/add-sub.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [SharedService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
