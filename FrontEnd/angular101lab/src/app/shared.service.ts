@@ -5,6 +5,8 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class SharedService {
+  //readonly APIUrl = "https://localhost:44302/api/StudentEnrolment";
+
 
   constructor() { }
 }
