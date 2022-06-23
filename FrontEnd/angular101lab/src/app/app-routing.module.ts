@@ -4,6 +4,7 @@ import { StudentComponent } from './student/student.component';
 import { CourseComponent } from './course/course.component';
 import { SubjectComponent } from './subject/subject.component';
 const routes: Routes = [
+  // {path "", }
   {path: "students", component:StudentComponent},
   {path: "courses", component:CourseComponent},
   {path: "subjects", component:SubjectComponent}

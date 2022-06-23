@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { SharedService } from 'src/app/shared.service';
 @Component({
   selector: 'app-display-stu',
   templateUrl: './display-stu.component.html',
@@ -7,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DisplayStuComponent implements OnInit {
 
-  constructor() { }
+  constructor(private service:SharedService) { }
+  studentList:any =[];
 
   ngOnInit(): void {
   }
-
+  refreshStuList(){
+    // this.service.getStuList().subscribe(data)
+  }
 }
