@@ -11,8 +11,11 @@ export class DisplayStuComponent implements OnInit {
   studentList:any =[];
 
   ngOnInit(): void {
+    this.refreshStuList();
   }
   refreshStuList(){
-    // this.service.getStuList().subscribe(data)
+    this.service.getStuList().subscribe(data=>{
+      this.studentList = data
+    });
   }
 }

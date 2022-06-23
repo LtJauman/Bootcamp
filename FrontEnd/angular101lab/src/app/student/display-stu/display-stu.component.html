@@ -1,1 +1,18 @@
-<p>display-stu works!</p>
+<div class="container">
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Student Id</th>
+            <th scope="col">First name</th>
+            <th scope="col">Last name</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let dataItem of studentList">
+                <td>{{dataItem.studentId}}</td>
+                <td>{{dataItem.firstName}}</td>
+                <td>{{dataItem.lastName}}</td>
+            </tr>
+        </tbody>
+      </table>
+</div>

@@ -1,1 +1,19 @@
-<p>display-cou works!</p>
+<div class="container">
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Course Id</th>
+            <th scope="col">Course name</th>
+            <th scope="col">Course description</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let dataItem of courseList">
+                <td>{{dataItem.courseId}}</td>
+                <td>{{dataItem.courseName}}</td>
+                <td>{{dataItem.courseDescription}}</td>
+            </tr>
+        </tbody>
+      </table>
+</div>
+

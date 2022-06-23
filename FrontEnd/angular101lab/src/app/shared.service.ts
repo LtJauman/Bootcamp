@@ -5,8 +5,20 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class SharedService {
-  //readonly APIUrl = "https://localhost:44302/api/StudentEnrolment";
+  readonly APIUrl = "https://localhost:44302/api/StudentEnrolment";
+  
 
+  constructor(private http:HttpClient) { }
 
-  constructor() { }
+  getStuList():Observable<any[]>{
+    return this.http.get<any>(this.APIUrl+'/Students')
+  }
+
+  addStudent(val:any){
+    return this.http.post(this.APIUrl+'/Students', val)
+  }
+
+  deleteStudent(val:any){
+    return this.http.delete(this.APIUrl+'/Students'+val)
+  }
 }
