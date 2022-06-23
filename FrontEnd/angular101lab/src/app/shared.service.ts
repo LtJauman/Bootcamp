@@ -21,4 +21,27 @@ export class SharedService {
   deleteStudent(val:any){
     return this.http.delete(this.APIUrl+'/Students'+val)
   }
+  getCouList():Observable<any[]>{
+    return this.http.get<any>(this.APIUrl+'/Courses')
+  }
+
+  addCourse(val:any){
+    return this.http.post(this.APIUrl+'/Courses', val)
+  }
+
+  deleteCourse(val:any){
+    return this.http.delete(this.APIUrl+'/Courses'+val)
+  }
+
+  getSubList():Observable<any[]>{
+    return this.http.get<any>(this.APIUrl+'/Subjects')
+  }
+
+  addSubject(val:any){
+    return this.http.post(this.APIUrl+'/Subjects', val)
+  }
+
+  deleteSubject(val:any){
+    return this.http.delete(this.APIUrl+'/Subjects'+val)
+  }
 }

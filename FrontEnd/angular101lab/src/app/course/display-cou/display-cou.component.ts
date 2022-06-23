@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { SharedService } from 'src/app/shared.service';
 @Component({
   selector: 'app-display-cou',
   templateUrl: './display-cou.component.html',
@@ -7,9 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DisplayCouComponent implements OnInit {
 
-  constructor() { }
+  constructor(private service:SharedService) {}
+  courseList:any=[];
 
   ngOnInit(): void {
+    this.refreshCouList();
+  }
+  refreshCouList(){
+    this.service.getCouList().subscribe(data=>{
+      this.courseList = data
+    });
   }
 
 }
+

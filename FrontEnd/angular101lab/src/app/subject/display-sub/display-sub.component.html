@@ -1,1 +1,19 @@
-<p>display-sub works!</p>
+<div class="container">
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Subject Id</th>
+            <th scope="col">Subject name</th>
+            <th scope="col">Subject description</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let dataItem of subjectList">
+                <td>{{dataItem.subjectId}}</td>
+                <td>{{dataItem.subjectName}}</td>
+                <td>{{dataItem.subjectDescription}}</td>
+            </tr>
+        </tbody>
+      </table>
+</div>
+
