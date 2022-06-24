@@ -8,8 +8,29 @@ import { SharedService } from 'src/app/shared.service';
 export class DisplaySubComponent implements OnInit {
 
   constructor(private service:SharedService) { }
+
   subjectList:any=[];
+  ModalTitle!: string;
+  ActivateAddEditSubComp:boolean=false; 
+  sub:any;
+
   ngOnInit(): void {
+    this.refreshSubList();
+  }
+
+  addClick(){
+    this.sub={
+      subjectId: 0,
+      subjectName:"",
+      subjectDescription:""
+      
+    }
+    this.ModalTitle="Add Subject";
+    this.ActivateAddEditSubComp=true;
+  }
+
+  closeClick(){
+    this.ActivateAddEditSubComp=false;
     this.refreshSubList();
   }
   refreshSubList(){
