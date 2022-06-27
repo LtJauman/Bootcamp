@@ -12,15 +12,17 @@ export class AddSubComponent implements OnInit {
   subjectId!:string;
   subjectName!: string;
   subjectDescription!: string;
+  courseId!: string;
   ngOnInit(): void {
     this.subjectId=this.sub.subjectId;
     this.subjectName=this.sub.subjectName;
     this.subjectDescription=this.sub.subjectDescription;
+    this.courseId="2"; //WARNING: giving it a default value. User should be able to choose a drop down from front end to decide what course it belongs to
   }
 
-  addSubject(){
+  addSubject(){ 
     var val = {subjectName:this.subjectName,
-    subjectDescription:this.subjectDescription}
+    subjectDescription:this.subjectDescription,courseId:this.courseId}
     this.service.addSubject(val).subscribe(res=>{
       alert(res.toString())
     })

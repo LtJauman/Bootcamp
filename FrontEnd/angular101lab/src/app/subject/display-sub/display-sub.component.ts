@@ -22,13 +22,21 @@ export class DisplaySubComponent implements OnInit {
     this.sub={
       subjectId: 0,
       subjectName:"",
-      subjectDescription:""
-      
+      subjectDescription:"",
+      courseId:""
     }
     this.ModalTitle="Add Subject";
     this.ActivateAddEditSubComp=true;
   }
-
+  deleteClick(item: { subjectId: any; }){
+    if(confirm("Are you sure you want to do this?")){
+      this.service.deleteSubject(item.subjectId).subscribe(data =>{
+        alert(data.toString());
+        this.refreshSubList();
+      }
+        )
+    }
+  }
   closeClick(){
     this.ActivateAddEditSubComp=false;
     this.refreshSubList();
