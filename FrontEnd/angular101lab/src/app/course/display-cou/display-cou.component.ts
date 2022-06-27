@@ -9,8 +9,24 @@ export class DisplayCouComponent implements OnInit {
 
   constructor(private service:SharedService) {}
   courseList:any=[];
+  ModalTitle!: string;
+  ActivateAddEditCouComp:boolean=false;
+  cou:any;
 
   ngOnInit(): void {
+    this.refreshCouList();
+  }
+  addClick(){
+    this.cou={
+      courseId: 0,
+      courseName:"",
+      courseDescription:"", 
+    }
+    this.ModalTitle="Add Course";
+    this.ActivateAddEditCouComp=true;
+  }
+  closeClick(){
+    this.ActivateAddEditCouComp=false;
     this.refreshCouList();
   }
   refreshCouList(){
