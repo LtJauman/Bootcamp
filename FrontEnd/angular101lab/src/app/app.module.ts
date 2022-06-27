@@ -13,6 +13,7 @@ import { SubjectComponent } from './subject/subject.component';
 import { DisplaySubComponent } from './subject/display-sub/display-sub.component';
 import { AddSubComponent } from './subject/add-sub/add-sub.component';
 import { SharedService } from './shared.service';
+
 import {HttpClientModule} from '@angular/common/http'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 @NgModule({

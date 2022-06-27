@@ -9,10 +9,28 @@ export class DisplayStuComponent implements OnInit {
 
   constructor(private service:SharedService) { }
   studentList:any =[];
+  ModalTitle!: string;
+  ActivateAddEditStuComp:boolean=false;
+  stu:any;
 
   ngOnInit(): void {
     this.refreshStuList();
   }
+
+  addClick(){
+    this.stu={
+      studentId: 0,
+      firstName:"",
+      lastName:"", 
+    }
+    this.ModalTitle="Add Student";
+    this.ActivateAddEditStuComp=true;
+  }
+  closeClick(){
+    this.ActivateAddEditStuComp=false;
+    this.refreshStuList();
+  }
+
   refreshStuList(){
     this.service.getStuList().subscribe(data=>{
       this.studentList = data

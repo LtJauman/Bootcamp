@@ -32,6 +32,7 @@ export class SharedService {
   deleteCourse(val:any){
     return this.http.delete(this.APIUrl+'/Courses'+val)
   }
+  
 
   getSubList():Observable<any[]>{
     return this.http.get<any>(this.APIUrl+'/Subjects')
