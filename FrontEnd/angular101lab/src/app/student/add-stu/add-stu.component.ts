@@ -18,7 +18,7 @@ export class AddStuComponent implements OnInit {
     this.lastName=this.stu.lastName;
   }
 
-  addStudent(){ //Im not adding parameters here, maybe that's the cause of the 500
+  addStudent(){ 
     var val = {firstName:this.firstName,
     lastName:this.lastName}
     this.service.addStudent(val).subscribe(res=>{

@@ -36,6 +36,11 @@
                 <td>{{dataItem.studentId}}</td>
                 <td>{{dataItem.firstName}}</td>
                 <td>{{dataItem.lastName}}</td>
+                <td>
+                  <button type="button" class="btn btn-danger mr-1" (click)="deleteClick(dataItem)">
+                    <i class="fa fa-trash" aria-hidden="true"></i>
+                  </button>
+                </td>
             </tr>
         </tbody>
       </table>
