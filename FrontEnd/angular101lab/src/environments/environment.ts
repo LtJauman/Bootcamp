@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  APIUrl:"https://localhost:44302/api/StudentEnrolment"
+  APIUrl:"https://localhost:7270/api"
 };
 
 /*
