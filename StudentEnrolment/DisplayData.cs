@@ -13,6 +13,7 @@ namespace StudentEnrolment
             foreach (var student in students)
             {
                     var data = new StringBuilder();
+                    Console.WriteLine("DeBUG: "+ student.GetType());
                     data.AppendLine($"Student ID {student.StudentId}");
                     data.AppendLine($"Student name: {student.FirstName} {student.LastName}");
                     Console.WriteLine(data.ToString());
