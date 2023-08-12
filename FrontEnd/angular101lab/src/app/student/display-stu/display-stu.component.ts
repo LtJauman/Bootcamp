@@ -26,20 +26,18 @@ export class DisplayStuComponent implements OnInit {
     this.ModalTitle="Add Student";
     this.ActivateAddEditStuComp=true;
   }
+
   deleteClick(item:any){
-    if(confirm("Are you sure you want to do this?")){
-      this.service.deleteStudent(item.studentId).subscribe(data =>{
-        alert(data.toString());
+    this.service.deleteStudent(item.studentId).subscribe(data =>{
         this.refreshStuList();
-      }
-        )
-    }
-  }
-  closeClick(){
-    this.ActivateAddEditStuComp=false;
-    this.refreshStuList();
+    });
   }
 
+  closeClick() {
+    this.ActivateAddEditStuComp = false;
+    this.refreshStuList();
+  }
+  
   refreshStuList(){
     this.service.getStuList().subscribe(data=>{
       this.studentList = data

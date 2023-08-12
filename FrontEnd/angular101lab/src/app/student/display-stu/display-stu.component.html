@@ -10,14 +10,14 @@
         </button>
       </div>
       <div class="modal-body">
-        <app-add-stu [stu]=stu *ngIf="ActivateAddEditStuComp"></app-add-stu>
+        <app-add-stu [stu]="stu" (studentAdded)="closeClick()" *ngIf="ActivateAddEditStuComp"></app-add-stu>
       </div>
     </div>
   </div>
 </div>
 
 <div class="container">
-    <table class="table">
+    <table class="table" id="student-table">
         <thead>
           <tr>
             <th scope="col">Student Id</th>
@@ -37,7 +37,7 @@
                 <td>{{dataItem.firstName}}</td>
                 <td>{{dataItem.lastName}}</td>
                 <td>
-                  <button type="button" class="btn btn-danger mr-1" (click)="deleteClick(dataItem)">
+                  <button id="delete-student" type="button" class="btn btn-danger mr-1" (click)="deleteClick(dataItem)">
                     <i class="fa fa-trash" aria-hidden="true"></i>
                   </button>
                 </td>

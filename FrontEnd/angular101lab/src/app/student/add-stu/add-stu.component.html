@@ -4,10 +4,10 @@
         <input type="text" class="form-control" [(ngModel)]="firstName"
         placeholder="Enter student name">
         <input type="text" class="form-control" [(ngModel)]="lastName"
-        placeholder="Enter student description">
+        placeholder="Enter student surname">
     </div>
 </div>
 
-<button (click)="addStudent()" *ngIf="stu.studentId==0" class="btn btn-primary">
+<button (click)="addStudent()" *ngIf="stu.studentId==0" class="btn btn-primary" data-dismiss="modal">
     Add
 </button>

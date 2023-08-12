@@ -22,6 +22,7 @@ export class SharedService {
   deleteStudent(val:any){
     return this.http.delete(environment.APIUrl+'/Students/'+val)
   }
+  
   getCouList():Observable<any[]>{
     return this.http.get<any>(environment.APIUrl+'/Courses')
   }
