@@ -1,7 +1,3 @@
-
-
-
-<!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-xl " role="document">
     <div class="modal-content">
@@ -21,7 +17,7 @@
 </div>
 
 <div class="container">
-    <table class="table">
+    <table class="table" id="subject-table">
         <thead>
           <tr>
             <th scope="col">Subject Id</th>
@@ -41,7 +37,7 @@
                 <td>{{dataItem.subjectName}}</td>
                 <td>{{dataItem.subjectDescription}}</td>
                 <td>
-                  <button type="button" class="btn btn-danger mr-1" (click)="deleteClick(dataItem)">
+                  <button id="delete-subject" type="button" class="btn btn-danger mr-1" (click)="deleteClick(dataItem)">
                     <i class="fa fa-trash" aria-hidden="true"></i>
                   </button>
                 </td>
