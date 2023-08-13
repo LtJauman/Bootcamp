@@ -14,6 +14,7 @@ export class AddStuComponent implements OnInit {
   studentId!:string;
   firstName!: string;
   lastName!: string;
+  
   ngOnInit(): void {
     this.studentId=this.stu.studentId;
     this.firstName=this.stu.firstName;

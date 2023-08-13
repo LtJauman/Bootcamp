@@ -1,5 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { SharedService } from 'src/app/shared.service';
+
 @Component({
   selector: 'app-add-cou',
   templateUrl: './add-cou.component.html',
@@ -8,11 +9,13 @@ import { SharedService } from 'src/app/shared.service';
 export class AddCouComponent implements OnInit {
 
   constructor(private service:SharedService) { }
-
   @Input() cou:any;
+  @Output() courseAdded: EventEmitter<any> = new EventEmitter();
+
   courseId!:string;
   courseName!: string;
   courseDescription!: string;
+
   ngOnInit(): void {
     this.courseId=this.cou.courseId;
     this.courseName=this.cou.courseName;
@@ -23,8 +26,8 @@ export class AddCouComponent implements OnInit {
     var val = {courseName:this.courseName,
       courseDescription:this.courseDescription}
     this.service.addCourse(val).subscribe(res=>{
-      alert(res.toString())
+      this.courseAdded.emit();
     })
-  } //I want it so that when this method gets called, the modal disappears
+  }
 
 }

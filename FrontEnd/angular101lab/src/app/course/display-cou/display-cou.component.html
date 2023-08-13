@@ -10,7 +10,7 @@
         </button>
       </div>
       <div class="modal-body">
-        <app-add-cou [cou]=cou *ngIf="ActivateAddEditCouComp"></app-add-cou>
+        <app-add-cou [cou]=cou (courseAdded)="closeClick()" *ngIf="ActivateAddEditCouComp"></app-add-cou>
       </div>
     </div>
   </div>
@@ -36,6 +36,11 @@
                 <td>{{dataItem.courseId}}</td>
                 <td>{{dataItem.courseName}}</td>
                 <td>{{dataItem.courseDescription}}</td>
+                <td>
+                  <button id="delete-course" type="button" class="btn btn-danger mr-1" (click)="deleteClick(dataItem)">
+                    <i class="fa fa-trash" aria-hidden="true"></i>
+                  </button>
+                </td>
             </tr>
         </tbody>
       </table>

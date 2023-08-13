@@ -10,8 +10,8 @@ namespace StudentEnrolmentNew.Models
         public int CourseId { set; get; }
         public string CourseName { set; get; }
         public string CourseDescription { set; get; }
-        public ICollection<Subjects> Subjects { get; set; }
-        public IList<CourseMembership> CourseMemberships { get; set; }
+        public ICollection<Subjects>? Subjects { get; set; }
+        public IList<CourseMembership>? CourseMemberships { get; set; }
 
         public Courses(string CourseName, string CourseDescription)
         {

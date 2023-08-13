@@ -28,19 +28,18 @@ export class DisplaySubComponent implements OnInit {
     this.ModalTitle="Add Subject";
     this.ActivateAddEditSubComp=true;
   }
+  
   deleteClick(item: { subjectId: any; }){
-    if(confirm("Are you sure you want to do this?")){
       this.service.deleteSubject(item.subjectId).subscribe(data =>{
-        alert(data.toString());
         this.refreshSubList();
-      }
-        )
-    }
+      })
   }
+
   closeClick(){
     this.ActivateAddEditSubComp=false;
     this.refreshSubList();
   }
+
   refreshSubList(){
     this.service.getSubList().subscribe(data=>{
       this.subjectList = data

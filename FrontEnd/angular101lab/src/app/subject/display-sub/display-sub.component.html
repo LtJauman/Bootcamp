@@ -14,7 +14,7 @@
         </button>
       </div>
       <div class="modal-body">
-        <app-add-sub  [sub]="sub" *ngIf="ActivateAddEditSubComp"></app-add-sub>
+        <app-add-sub  [sub]="sub" (subjectAdded)="closeClick()" *ngIf="ActivateAddEditSubComp"></app-add-sub>
       </div>
     </div>
   </div>

@@ -6,9 +6,7 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root'
 })
 export class SharedService {
-  // readonly APIUrl = "https://localhost:44302/api/StudentEnrolment";
   
-
   constructor(private http:HttpClient) { }
 
   getStuList():Observable<any[]>{
@@ -32,10 +30,9 @@ export class SharedService {
   }
 
   deleteCourse(val:any){
-    return this.http.delete(environment.APIUrl+'/Courses'+val)
+    return this.http.delete(environment.APIUrl+'/Courses/'+val)
   }
   
-
   getSubList():Observable<any[]>{
     return this.http.get<any>(environment.APIUrl+'/Subjects')
   }
