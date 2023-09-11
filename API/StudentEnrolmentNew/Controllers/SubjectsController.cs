@@ -73,6 +73,7 @@ namespace StudentEnrolmentWeb.Controllers
         [HttpPost]
         public async Task<ActionResult<Subjects>> PostSubject(Subjects subject)
         {
+            
             _context.Subject.Add(subject);
             await _context.SaveChangesAsync();
 
